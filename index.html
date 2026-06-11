@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Simran turns 30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kraft:#d8c6a2;
+  --kraft-deep:#c9b48b;
+  --paper:#fdfaf2;
+  --ink:#3a2e20;
+  --ink-soft:#6b5a44;
+  --pink:#e0497c;
+  --marigold:#eda53a;
+  --teal:#3f7d72;
+  --shadow:0 6px 18px rgba(58,46,32,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Fraunces',serif;
+  background:var(--kraft);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0 0.05 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  color:var(--ink);
+  overflow-x:hidden;
+}
+.hand{font-family:'Caveat',cursive}
+
+/* ---------- shared ---------- */
+section{padding:64px 20px;max-width:520px;margin:0 auto}
+.eyebrow{
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:center;margin-bottom:10px;
+}
+h2{
+  font-size:34px;font-weight:600;font-style:italic;
+  text-align:center;margin-bottom:36px;line-height:1.1;
+}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* washi tape */
+.tape{
+  position:absolute;width:96px;height:28px;
+  background:linear-gradient(90deg,rgba(224,73,124,.85),rgba(224,73,124,.7));
+  opacity:.9;border-left:2px dashed rgba(255,255,255,.45);border-right:2px dashed rgba(255,255,255,.45);
+  box-shadow:0 2px 5px rgba(58,46,32,.18);
+}
+.tape.gold{background:linear-gradient(90deg,rgba(237,165,58,.9),rgba(237,165,58,.72))}
+.tape.teal{background:linear-gradient(90deg,rgba(63,125,114,.85),rgba(63,125,114,.68))}
+
+/* polaroid */
+.polaroid{
+  background:var(--paper);padding:10px;
+  box-shadow:var(--shadow);position:relative;
+}
+.polaroid img{width:100%;display:block;background:#e8e2d2}
+.polaroid .cap{
+  display:block;text-align:center;padding:7px 2px 2px;
+  font-family:'Caveat',cursive;font-size:20px;line-height:1.15;color:var(--ink-soft);
+}
+
+/* ---------- cover ---------- */
+#cover{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding-top:48px}
+#cover .polaroid{width:min(300px,78vw);transform:rotate(-3deg)}
+#cover .tape{top:-14px;left:50%;transform:translateX(-50%) rotate(-4deg)}
+#cover h1{
+  font-size:clamp(56px,17vw,84px);font-weight:400;font-style:italic;
+  line-height:.95;margin-top:34px;
+}
+#cover .sub{
+  font-family:'Caveat',cursive;font-size:30px;color:var(--pink);margin-top:6px;
+}
+#cover .date{
+  font-size:12px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ink-soft);margin-top:16px;
+}
+.scrollcue{
+  margin-top:42px;font-family:'Caveat',cursive;font-size:22px;color:var(--ink-soft);
+  animation:bob 2.2s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+@media (prefers-reduced-motion: reduce){.scrollcue{animation:none}}
+
+/* ---------- timeline ---------- */
+#timeline .track{position:relative;padding-left:30px}
+#timeline .track::before{
+  content:"";position:absolute;left:9px;top:6px;bottom:6px;width:0;
+  border-left:2px dashed var(--ink-soft);opacity:.55;
+}
+.milestone{position:relative;margin-bottom:42px}
+.milestone::before{
+  content:"";position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:var(--marigold);border:2px solid var(--ink);
+}
+.milestone .when{
+  display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);padding:4px 10px;margin-bottom:8px;
+}
+.milestone .what{font-family:'Caveat',cursive;font-size:25px;line-height:1.25}
+.milestone .mini{
+  width:128px;margin-top:12px;padding:6px 6px 8px;transform:rotate(2.5deg);
+}
+.milestone:nth-child(even) .mini{transform:rotate(-3deg)}
+.milestone:nth-child(even)::before{background:var(--pink)}
+
+/* ---------- gallery ---------- */
+#gallery .grid{columns:2;column-gap:14px}
+#gallery .polaroid{margin-bottom:18px;break-inside:avoid;cursor:pointer}
+#gallery .polaroid:nth-child(3n){transform:rotate(2deg)}
+#gallery .polaroid:nth-child(3n+1){transform:rotate(-2.2deg)}
+#gallery .polaroid:nth-child(3n+2){transform:rotate(1.2deg)}
+#gallery .polaroid .cap{font-size:17px}
+#gallery .polaroid .tape{width:62px;height:20px;top:-10px;left:50%;transform:translateX(-50%) rotate(-3deg)}
+
+/* lightbox */
+#lightbox{
+  position:fixed;inset:0;background:rgba(35,27,17,.93);display:none;
+  align-items:center;justify-content:center;z-index:50;padding:20px;
+}
+#lightbox.open{display:flex}
+#lightbox img{max-width:100%;max-height:82vh;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+#lightbox .lbcap{
+  position:absolute;bottom:34px;left:0;right:0;text-align:center;
+  font-family:'Caveat',cursive;font-size:26px;color:var(--paper);
+}
+#lightbox .close{
+  position:absolute;top:18px;right:22px;font-size:34px;color:var(--paper);
+  background:none;border:none;cursor:pointer;line-height:1;
+}
+
+/* ---------- quiz ---------- */
+#quiz .card{
+  background:var(--paper);box-shadow:var(--shadow);padding:26px 22px 22px;
+  transform:rotate(-.6deg);position:relative;
+}
+#quiz .card .tape{top:-13px;right:18px;transform:rotate(6deg);width:78px}
+#quiz .qnum{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;
+}
+#quiz .qtext{font-size:22px;font-style:italic;font-weight:600;line-height:1.25;margin-bottom:18px}
+#quiz .opt{
+  display:block;width:100%;text-align:left;font-family:'Caveat',cursive;font-size:22px;
+  background:none;border:2px solid var(--kraft-deep);padding:10px 14px;margin-bottom:10px;
+  color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s;
+}
+#quiz .opt:active{background:var(--kraft)}
+#quiz .opt.right{border-color:var(--teal);background:rgba(63,125,114,.14)}
+#quiz .opt.wrong{border-color:var(--pink);background:rgba(224,73,124,.12)}
+#quiz .verdict{font-family:'Caveat',cursive;font-size:22px;min-height:30px;color:var(--teal)}
+#quiz .verdict.no{color:var(--pink)}
+#quiz .nextbtn{
+  margin-top:10px;font-family:'Fraunces',serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);border:none;padding:12px 22px;cursor:pointer;display:none;
+}
+#quiz .nextbtn.show{display:inline-block}
+#quiz .score{
+  text-align:center;font-family:'Caveat',cursive;font-size:28px;margin-top:8px;
+}
+
+/* ---------- envelope / letter ---------- */
+#letter{padding-bottom:96px}
+.envelope-wrap{display:flex;flex-direction:column;align-items:center}
+.envelope{
+  position:relative;width:min(320px,84vw);aspect-ratio:8/5;cursor:pointer;
+  filter:drop-shadow(0 8px 20px rgba(58,46,32,.3));
+  transition:transform .2s;
+}
+.envelope:active{transform:scale(.98)}
+.envelope .body,.envelope .flap{position:absolute;inset:0}
+.envelope .body{background:#efe6d0;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.envelope .body::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent 49.6%,rgba(58,46,32,.12) 50%,transparent 50.4%),
+             linear-gradient(225deg,transparent 49.6%,rgba(58,46,32,.12) 50%,transparent 50.4%);
+}
+.envelope .flap{
+  background:#e4d8bd;clip-path:polygon(0 0,100% 0,50% 62%);
+  transform-origin:top;transition:transform .8s cubic-bezier(.6,0,.3,1);z-index:3;
+}
+.envelope.open .flap{transform:rotateX(180deg);z-index:1}
+.seal{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;
+  width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f06292,var(--pink) 60%,#a82c55);
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:600;font-size:22px;box-shadow:0 3px 8px rgba(0,0,0,.3);
+  transition:opacity .4s;
+}
+.envelope.open .seal{opacity:0;pointer-events:none}
+.sealed-note{font-family:'Caveat',cursive;font-size:23px;color:var(--ink-soft);margin-top:18px;text-align:center}
+.letter-paper{
+  display:none;background:var(--paper);box-shadow:var(--shadow);
+  padding:34px 26px;margin-top:26px;transform:rotate(.5deg);position:relative;max-width:480px;
+}
+.letter-paper.show{display:block;animation:rise .8s ease}
+@keyframes rise{from{opacity:0;transform:translateY(34px) rotate(.5deg)}to{opacity:1;transform:translateY(0) rotate(.5deg)}}
+@media (prefers-reduced-motion: reduce){.letter-paper.show{animation:none}}
+.letter-paper .salut{font-family:'Caveat',cursive;font-size:30px;color:var(--pink);margin-bottom:14px}
+.letter-paper p{font-size:16.5px;line-height:1.75;margin-bottom:14px}
+.letter-paper .sign{font-family:'Caveat',cursive;font-size:28px;margin-top:20px;text-align:right}
+
+footer{
+  text-align:center;padding:0 20px 70px;font-family:'Caveat',cursive;
+  font-size:24px;color:var(--ink-soft);
+}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:60}
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section id="cover">
+  <div class="polaroid">
+    <span class="tape gold"></span>
+    <img src="photos/photo_31.jpg" alt="Simran and Anurag">
+    <span class="cap hand">us</span>
+  </div>
+  <h1>Simran</h1>
+  <div class="sub">turns thirty</div>
+  <div class="date">11 · June · 2026</div>
+  <div class="scrollcue">scroll down, birthday girl ↓</div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline" class="reveal">
+  <div class="eyebrow">chapter one</div>
+  <h2>The story so far</h2>
+  <div class="track" id="trackEl"></div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="reveal">
+  <div class="eyebrow">chapter two</div>
+  <h2>Proof it happened</h2>
+  <div class="grid" id="gridEl"></div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section id="quiz" class="reveal">
+  <div class="eyebrow">chapter three</div>
+  <h2>How well do you<br>know us?</h2>
+  <div class="card">
+    <span class="tape teal"></span>
+    <div class="qnum" id="qnum"></div>
+    <div class="qtext" id="qtext"></div>
+    <div id="opts"></div>
+    <div class="verdict" id="verdict"></div>
+    <button class="nextbtn" id="nextbtn">Next</button>
+  </div>
+  <div class="score" id="scoreEl"></div>
+</section>
+
+<!-- ============ LETTER ============ -->
+<section id="letter" class="reveal">
+  <div class="eyebrow">chapter four</div>
+  <h2>Something for you</h2>
+  <div class="envelope-wrap">
+    <div class="envelope" id="env">
+      <div class="flap"></div>
+      <div class="body"></div>
+      <div class="seal">30</div>
+    </div>
+    <div class="sealed-note" id="sealNote">finish the quiz to break the seal…</div>
+    <div class="letter-paper" id="paper">
+      <div class="salut" id="salut"></div>
+      <div id="letterBody"></div>
+      <div class="sign" id="sign"></div>
+    </div>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+
+<!-- lightbox -->
+<div id="lightbox" role="dialog" aria-label="photo">
+  <button class="close" aria-label="close">×</button>
+  <img src="" alt="">
+  <div class="lbcap"></div>
+</div>
+<canvas id="confetti"></canvas>
+
+<script>
+/* ============================================================
+   ALL SITE CONTENT (captions, timeline, quiz, letter) IS IN
+   THIS ONE BLOCK. Edit here and commit to update the site.
+   ============================================================ */
+const CONFIG = {
+
+  // --- timeline ---
+  timeline: [
+    { when: "Dec 2021", what: "Where it started: a Calcutta terrace.", photo: "photos/photo_02.jpg" },
+    { when: "Apr 2022", what: "We got married." },
+    { when: "2022",     what: "Krabeee. The biggest room in Aonang Fiore.", photo: "photos/photo_05.jpg" },
+    { when: "2023",     what: "Malaysia. Genting, tea country, one excellent jump photo.", photo: "photos/photo_14.jpg" },
+    { when: "2024",     what: "Dubai, a Hilton lobby we treated like a photoshoot, and a black-tie December.", photo: "photos/photo_22.jpg" },
+    { when: "11 June 2026", what: "Thirty. Eight stamps in: Uttarakhand, Tamil Nadu, West Bengal, Singapore, Dubai, Malaysia, Thailand, the US. The next decade gets more.", photo: "photos/photo_29.jpg" }
+  ],
+
+  // --- gallery ---
+  gallery: [
+    { src: "photos/photo_01.jpg", cap: "the very first photo" },
+    { src: "photos/photo_02.jpg", cap: "Calcutta terrace" },
+    { src: "photos/photo_03.jpg", cap: "home" },
+    { src: "photos/photo_04.jpg", cap: "Diwali" },
+    { src: "photos/photo_05.jpg", cap: "Krabeee, biggest room in Aonang Fiore" },
+    { src: "photos/photo_06.jpg", cap: "Gardens by the Bay!!" },
+    { src: "photos/photo_07.jpg", cap: "date night" },
+    { src: "photos/photo_08.jpg", cap: "Malaysia (effectively)" },
+    { src: "photos/photo_10.jpg", cap: "festival season" },
+    { src: "photos/photo_11.jpg", cap: "street art hunting" },
+    { src: "photos/photo_12.jpg", cap: "Christmas in Singapore (really?)" },
+    { src: "photos/photo_15.jpg", cap: "Malaysia (really!)" },
+    { src: "photos/photo_16.jpg", cap: "tea country!" },
+    { src: "photos/photo_17.jpg", cap: "tea plantation, Malaysia" },
+    { src: "photos/photo_20.jpg", cap: "Rosy, 99 Parc Rosewood" },
+    { src: "photos/photo_21.jpg", cap: "sea breeze" },
+    { src: "photos/photo_23.jpg", cap: "Roasteryyyy" },
+    { src: "photos/photo_25.jpg", cap: "city lights" },
+    { src: "photos/photo_26.jpg", cap: "mini golf, mini Simran" },
+    { src: "photos/photo_27.jpg", cap: "winter in Singapore (really?!)" },
+    { src: "photos/photo_28.jpg", cap: "dance floor" },
+    { src: "photos/photo_30.jpg", cap: "black tie" }
+  ],
+
+  // --- quiz ---
+  quiz: [
+    { q: "How many beer cans does it take for you to become a public safety announcement?",
+      opts: ["One to two", "Four, minimum", "I hold my liquor extremely well", "Trick question, I don't drink"], a: 0,
+      yes: "Self-aware. Impressive.", no: "It's two. Max. We have footage." },
+    { q: "When I die, what do you plan on preserving?",
+      opts: ["My watch", "My teeth, because none of them align", "My Goodreads account", "Nothing, moving on immediately"], a: 1,
+      yes: "Still the strangest compliment I have ever received.", no: "It's the teeth. You said it. I have witnesses." },
+    { q: "You put something in the pressure cooker. What happens next?",
+      opts: ["A perfectly cooked meal", "It burns, and I start singing 'Ab toh aadat si hai mujhko'", "The smoke alarm handles dinner", "We order in before it finishes"], a: 1,
+      yes: "...aise jeene mein 🎵", no: "Burnt. It is always burnt. And then I sing." },
+    { q: "An ad comes on TV. What do you do?",
+      opts: ["Skip it", "Mute it", "Reply to the characters as if they can hear you", "Scroll your phone"], a: 2,
+      yes: "They can't hear you. They never could.", no: "You answer them. Out loud. Every single time." },
+    { q: "Our worst travel disaster ever happened where, and with whom?",
+      opts: ["Genting, with the rain", "Krabi, with the boat", "New York, with Arham", "Dubai, with the heat"], a: 2,
+      yes: "December 2025. Never again. Probably again.", no: "New York. Arham. December 2025. How could you forget." },
+    { q: "In four years with you, my car ticket count has:",
+      opts: ["Stayed exactly the same", "Gone down, you're a calming presence", "Outnumbered the rest of my driving life combined", "What tickets?"], a: 2,
+      yes: "Ae Accident!", no: "Ae Accident! (the answer was C)" }
+  ],
+
+  // --- the letter ---
+  letter: {
+    salutation: "Sheetoo!! My favorite Sheetoo,",
+    paragraphs: [
+      "What a blessing it is to be with you. You make me happy every single day.",
+      "Welcome to the 30s. That means lots of lower back pain, slower injury recovery, and gastric troubles."
+    ],
+    signature: "I love you to the room and back"
+  },
+
+  footer: "made for you, with you, by your less-photogenic half ♥"
+};
+
+/* ============================================================
+   Engine below. You should not need to touch anything past here.
+   ============================================================ */
+
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// timeline
+const track = document.getElementById('trackEl');
+CONFIG.timeline.forEach(m => {
+  const d = document.createElement('div');
+  d.className = 'milestone';
+  d.innerHTML = `<span class="when">${m.when}</span><div class="what">${m.what}</div>` +
+    (m.photo ? `<div class="polaroid mini"><img loading="lazy" src="${m.photo}" alt=""></div>` : '');
+  track.appendChild(d);
+});
+
+// gallery + lightbox
+const grid = document.getElementById('gridEl');
+const lb = document.getElementById('lightbox');
+const lbImg = lb.querySelector('img'), lbCap = lb.querySelector('.lbcap');
+CONFIG.gallery.forEach(g => {
+  const p = document.createElement('div');
+  p.className = 'polaroid';
+  p.innerHTML = `<span class="tape ${Math.random() < .5 ? 'gold' : ''}"></span><img loading="lazy" src="${g.src}" alt=""><span class="cap">${g.cap}</span>`;
+  p.addEventListener('click', () => { lbImg.src = g.src; lbCap.textContent = g.cap; lb.classList.add('open'); });
+  grid.appendChild(p);
+});
+lb.addEventListener('click', () => lb.classList.remove('open'));
+
+// quiz
+let qi = 0, score = 0, quizDone = false;
+const qnum = document.getElementById('qnum'), qtext = document.getElementById('qtext'),
+      opts = document.getElementById('opts'), verdict = document.getElementById('verdict'),
+      nextbtn = document.getElementById('nextbtn'), scoreEl = document.getElementById('scoreEl');
+
+function renderQ() {
+  const Q = CONFIG.quiz[qi];
+  qnum.textContent = `Question ${qi + 1} of ${CONFIG.quiz.length}`;
+  qtext.textContent = Q.q;
+  verdict.textContent = ''; verdict.classList.remove('no');
+  nextbtn.classList.remove('show');
+  opts.innerHTML = '';
+  Q.opts.forEach((o, i) => {
+    const b = document.createElement('button');
+    b.className = 'opt'; b.textContent = o;
+    b.addEventListener('click', () => {
+      if (verdict.textContent) return;
+      if (i === Q.a) { b.classList.add('right'); verdict.textContent = '✓ ' + Q.yes; score++; }
+      else {
+        b.classList.add('wrong'); verdict.textContent = '✗ ' + Q.no; verdict.classList.add('no');
+        opts.children[Q.a].classList.add('right');
+      }
+      nextbtn.classList.add('show');
+      nextbtn.textContent = qi === CONFIG.quiz.length - 1 ? 'See your prize' : 'Next';
+    });
+    opts.appendChild(b);
+  });
+}
+nextbtn.addEventListener('click', () => {
+  qi++;
+  if (qi < CONFIG.quiz.length) renderQ();
+  else {
+    quizDone = true;
+    qnum.textContent = 'Done!';
+    qtext.textContent = score === CONFIG.quiz.length ? 'Perfect score. As expected.' : `${score}/${CONFIG.quiz.length} — acceptable. Barely.`;
+    opts.innerHTML = ''; verdict.textContent = ''; nextbtn.classList.remove('show');
+    document.getElementById('sealNote').textContent = 'the seal is broken. tap the envelope ↓';
+    document.getElementById('letter').scrollIntoView({ behavior: 'smooth' });
+  }
+});
+renderQ();
+
+// letter / envelope
+const env = document.getElementById('env'), paper = document.getElementById('paper');
+document.getElementById('salut').textContent = CONFIG.letter.salutation;
+document.getElementById('letterBody').innerHTML = CONFIG.letter.paragraphs.map(p => `<p>${p}</p>`).join('');
+document.getElementById('sign').textContent = CONFIG.letter.signature;
+document.getElementById('foot').textContent = CONFIG.footer;
+
+env.addEventListener('click', () => {
+  if (!quizDone) {
+    document.getElementById('sealNote').textContent = 'nope — quiz first! no shortcuts on your birthday.';
+    setTimeout(() => document.getElementById('sealNote').textContent = 'finish the quiz to break the seal…', 2200);
+    return;
+  }
+  if (env.classList.contains('open')) return;
+  env.classList.add('open');
+  setTimeout(() => { paper.classList.add('show'); confettiBurst(); }, 500);
+  document.getElementById('sealNote').textContent = '';
+});
+
+// confetti
+function confettiBurst() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const c = document.getElementById('confetti'), ctx = c.getContext('2d');
+  c.width = innerWidth; c.height = innerHeight;
+  const cols = ['#e0497c', '#eda53a', '#3f7d72', '#fdfaf2'];
+  const parts = Array.from({ length: 130 }, () => ({
+    x: Math.random() * c.width, y: -20 - Math.random() * c.height * .5,
+    w: 6 + Math.random() * 6, h: 8 + Math.random() * 8,
+    vy: 2 + Math.random() * 3.4, vx: -1.2 + Math.random() * 2.4,
+    r: Math.random() * Math.PI, vr: -.1 + Math.random() * .2,
+    col: cols[(Math.random() * cols.length) | 0]
+  }));
+  let t = 0;
+  (function tick() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    parts.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.r += p.vr;
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r);
+      ctx.fillStyle = p.col; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore();
+    });
+    if (++t < 280) requestAnimationFrame(tick); else ctx.clearRect(0, 0, c.width, c.height);
+  })();
+}
+</script>
+</body>
+</html>
